@@ -1,3 +1,10 @@
+/**
+ * @author Marcus Alexio Prado
+ * Date: January 12th 2026
+ * Project: Writing random integers to a created text file
+ * 
+ */
+
 import java.io.*;
 
 /**
@@ -11,7 +18,7 @@ import java.io.*;
  * - Use text I/O (PrintWriter)
  * 
  * @author Marcus Alexio Prado
- * Date: January 2026
+ * Date: January 12th 2026
  * 
  */
 
@@ -33,9 +40,8 @@ public class exercise1_starter {
             text.close();
 
             System.out.println("100 random integers written to Exercise17_01.txt");
-            
         } catch (Exception e) {
-
+            System.out.println("An error occurred.");
         }
     }
 }
