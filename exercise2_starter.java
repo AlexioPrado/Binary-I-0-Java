@@ -2,7 +2,7 @@
  * @author Marcus Alexio Prado
  * Date: January 12th 2026
  * last Modified: January 13th 2026
- * Project: 
+ * Project: Write and Read Data with Data Streams
  * 
  */
 
@@ -95,18 +95,5 @@ public class exercise2_starter {
         } catch (Exception e) {
             System.out.println("An error occurred.");
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
 }
