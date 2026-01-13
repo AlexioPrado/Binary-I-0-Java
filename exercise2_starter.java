@@ -25,10 +25,9 @@ import java.util.Date;
  * 
  * @author Marcus Alexio Prado
  * Date: January 12th 2026
- * Last Modified: January 12th 2026
+ * Last Modified: January 13th 2026
  */
 public class exercise2_starter {
-    
     public static void main(String[] args) throws IOException {
         
         // Data to write
