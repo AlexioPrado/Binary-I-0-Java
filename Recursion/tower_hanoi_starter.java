@@ -1,4 +1,14 @@
 /**
+ * @author Marcus
+ * Date created: 1/21/26
+ * Last modified: 1/24/26
+ * Purpose: Tower of Hanoi
+ */
+ 
+import java.util.ArrayList;
+import java.util.List;
+
+/**
  * Tower of Hanoi Lab
  * 
  * The Tower of Hanoi is a classic problem that demonstrates recursion.
@@ -18,11 +28,16 @@
  * 
  * @author Marcus Prado
  */
+ 
 public class towerHanoi {
     
     // Part 3: Move counter (you'll add this)
     private static int moveCount = 0;
     
+    static ArrayList<Integer> pegA = new ArrayList<>();
+    static ArrayList<Integer> pegB = new ArrayList<>();
+    static ArrayList<Integer> pegC = new ArrayList<>();
+
     /**
      * PART 1: Implement the classic Tower of Hanoi solver
      * 
@@ -43,10 +58,14 @@ public class towerHanoi {
             // TODO: Implement base case
         if (n == 1) {
             System.out.println("Move " + n + " from " + source + " to " + destination);
+            displayTowers(source, destination);
+            moveCount++;
         } else {
             // TODO: Implement recursive case (3 steps)
             moveDisks(n-1, source, auxiliary, destination);
             System.out.println("move " + n + " from " + source + " to " + destination);
+            moveCount++;
+            displayTowers(source, destination);
             moveDisks(n-1, auxiliary, destination, source);
         }
         
@@ -67,10 +86,54 @@ public class towerHanoi {
      * Hint: You'll need to track which disks are on which peg.
      * Consider using ArrayList<Integer> for each peg.
      */
-    public static void displayTowers() {
+    public static void displayTowers(char source, char destination) {
+        ArrayList<Integer> src;
+        ArrayList<Integer> des;
+        
+        switch (source) {
+            case 'A':
+                src = pegA;
+                break;
+            case 'B':
+                src = pegB;
+                break;
+            case 'C':
+                src = pegC;
+                break;
+            default:
+                System.out.println("HELP ME");
+        }
+        switch (destination) {
+            case 'A':
+                src = pegA;
+                break;
+            case 'B':
+                src = pegB;
+                break;
+            case 'C':
+                src = pegC;
+                break;
+            default:
+                System.out.println("HELP ME");
+        }
+        
+        //src.add(des.get(des.size()-1));
+        //des.remove(des.size()-1);
+        
         // TODO: Implement tower visualization
         System.out.println("--- Tower State ---");
         // Display pegs A, B, C and their disks
+        
+    }
+    /**
+     * Part 2a: Populate towers
+     * Add the amount of discs needed starting at peg A
+     * 
+     */
+    public static void populateTowers(int n, ArrayList<Integer> tower){
+        for (int i = n; i > 0; i--){
+            tower.add(i);
+        }
     }
     
     /**
@@ -102,19 +165,24 @@ public class towerHanoi {
         System.out.println("Tower of Hanoi - " + n + " disks");
         System.out.println("Moving disks from A to C using B\n");
         
+        // Tower of Hanoi with 3 disks
+        // Populate the pegs    
+        populateTowers(n, pegA);
         // Reset move counter
         moveCount = 0;
-        
         // Solve the puzzle
         moveDisks(n, 'A', 'C', 'B');
-        
+        // Rest pegs
+        pegC.clear();
         // Display statistics
         printStatistics(n);
         
-        // Test with different numbers of disks
+        // Tower of Hanoi with 4 disks
         System.out.println("\n\n=== Try with 4 disks ===");
+        //populateTowers(4, pegA);
         moveCount = 0;
         moveDisks(4, 'A', 'C', 'B');
+        pegC.clear();
         printStatistics(4);
     }
 }
