@@ -1,3 +1,9 @@
+/**
+ * Name: Marcus Prado
+ * Date: 1/28/26
+ * Purpose: User enter 5 strings and output user's input in reverse
+ * 
+ */
 
 import java.util.*;
 
