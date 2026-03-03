@@ -1,7 +1,7 @@
 /*
  * Marcus Prado
  * 3/3/26
- * 
+ * Program: Merge Sort w/o temporary lists
  */
 
 public class Exercise23_05 {
@@ -10,6 +10,11 @@ public class Exercise23_05 {
     mergeSort(list, 0, list.length - 1);
   }
 
+  /*
+   * mergeSort
+   * Params: int[] list, int low, int high
+   * Purpose: Split lists and store the sorted lists
+   */
   private static void mergeSort(int[] list, int low, int high) {
     if (low < high) {
       int mid = (low + high) / 2;
@@ -19,7 +24,11 @@ public class Exercise23_05 {
       System.arraycopy(temp, 0, list, low, high - low + 1);
     }
   }
-
+  /*
+   * merge
+   * Params: int[] list, int low, int high
+   * Purpose: Sorting and merging lists
+   */
   private static int[] merge(int[] list, int low, int high) {
     int[] temp = new int[high - low + 1];
  
