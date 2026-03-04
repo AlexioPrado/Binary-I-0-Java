@@ -22,7 +22,7 @@ public class Exercise23_05 {
       //rescurse and give the top and bottom half of lists
       mergeSort(list, low, mid);
       mergeSort(list, mid + 1, high);
-      //Create temporary list and call the merge method tp sort
+      //Create temporary list and call the merge method to sort
       int[] temp = merge(list, low, high);
       //Copy the list
       System.arraycopy(temp, 0, list, low, high - low + 1);
