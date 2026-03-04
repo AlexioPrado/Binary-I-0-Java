@@ -19,7 +19,7 @@ public class Exercise23_05 {
     if (low < high) {
       //Find the middle index
       int mid = (low + high) / 2;
-      //rescurse and give the top and bottom half of lists
+      //recurse and give the top and bottom half of lists
       mergeSort(list, low, mid);
       mergeSort(list, mid + 1, high);
       //Create temporary list and call the merge method to sort
