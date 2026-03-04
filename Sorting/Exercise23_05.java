@@ -17,10 +17,14 @@ public class Exercise23_05 {
    */
   private static void mergeSort(int[] list, int low, int high) {
     if (low < high) {
+      //Find the middle index
       int mid = (low + high) / 2;
+      //rescurse and give the top and bottom half of lists
       mergeSort(list, low, mid);
       mergeSort(list, mid + 1, high);
+      //Create temporary list and call the merge method tp sort
       int[] temp = merge(list, low, high);
+      //Copy the list
       System.arraycopy(temp, 0, list, low, high - low + 1);
     }
   }
