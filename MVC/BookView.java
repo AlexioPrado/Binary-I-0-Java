@@ -13,7 +13,7 @@ public class BookView {
     //             Title:  Clean Code
     //             Author: Robert C. Martin
     //             Year:   2008
-    public void displayBook(String title, String author, int year){
+    public static void displayBook(String title, String author, int year){
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Year: " + year);
@@ -22,7 +22,7 @@ public class BookView {
     // TODO (2): Write a method called displayMessage that accepts:
     //             - msg (String)
     //           It should print the message to the console.
-    public void displayMessage(String msg){
+    public static void displayMessage(String msg){
         System.out.println(msg);
     }
 }

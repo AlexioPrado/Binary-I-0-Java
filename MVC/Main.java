@@ -9,13 +9,13 @@ public class Main {
         //             title  = "Clean Code"
         //             author = "Robert C. Martin"
         //             year   = 2008
-
+        Book book1 = Book("Clean Code", "Robert C. Martin", 2008);
 
         // TODO (2): Create a BookView
-
+        BookView.displayBook(book1.title, book1.author, book1.year);
 
         // TODO (3): Create a BookController, passing in your Book and BookView
-
+        BookController()
 
         // TODO (4): Call showBook() to display the book's initial details
 
