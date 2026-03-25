@@ -12,20 +12,20 @@ public class Main {
         Book book1 = Book("Clean Code", "Robert C. Martin", 2008);
 
         // TODO (2): Create a BookView
-        BookView.displayBook(book1.title, book1.author, book1.year);
+        BookView bookView1 = BookView();
 
         // TODO (3): Create a BookController, passing in your Book and BookView
-        BookController()
+        BookController bookCtrl = BookController(book1, bookView1);
 
         // TODO (4): Call showBook() to display the book's initial details
-
+        bookCtrl.showBook();
 
         // TODO (5): Call updateYear(2020), then call showBook() again
         //           Expected: "Year updated." followed by the updated details
-
+        bookCtrl.updateYear(2020);
 
         // TODO (6): Call updateYear(3000)
         //           Expected: "Invalid year."
-
+        bookCtrl.updateYear(3000);
     }
 }

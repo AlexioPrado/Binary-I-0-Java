@@ -22,7 +22,7 @@ public class BookView {
     // TODO (2): Write a method called displayMessage that accepts:
     //             - msg (String)
     //           It should print the message to the console.
-    public static void displayMessage(String msg){
+    public void displayMessage(String msg){
         System.out.println(msg);
     }
 }

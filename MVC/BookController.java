@@ -38,6 +38,6 @@ public class BookController {
     //           It should retrieve the title, author, and year from the model
     //           and pass them to view.displayBook(...).
     public void showBook(){
-        
+        this.view.displayBook(model.getTitle(), model.getAuthor(), model.getYear());
     }
 }
