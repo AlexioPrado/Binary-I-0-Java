@@ -13,7 +13,7 @@ public class BookView {
     //             Title:  Clean Code
     //             Author: Robert C. Martin
     //             Year:   2008
-    public static void displayBook(String title, String author, int year){
+    public void displayBook(String title, String author, int year){
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Year: " + year + "\n");
