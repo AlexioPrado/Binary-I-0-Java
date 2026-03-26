@@ -26,11 +26,11 @@ public class BookController {
     //             - Otherwise:
     //                 • Call view.displayMessage("Invalid year.")
     public void updateYear(int newYear){
-        if (newYear >= 1000 || newYear <= 2100){
+        if (newYear >= 1000 & newYear <= 2100){
             this.model.setYear(newYear);
-            this.view.displayMessage("Year updated.");
+            this.view.displayMessage("Year updated.\n");
         } else {
-            this.view.displayMessage("Invalid year.");
+            this.view.displayMessage("Invalid year.\n");
         }
     }
 
@@ -38,6 +38,6 @@ public class BookController {
     //           It should retrieve the title, author, and year from the model
     //           and pass them to view.displayBook(...).
     public void showBook(){
-        this.view.displayBook(model.getTitle(), model.getAuthor(), model.getYear());
+        view.displayBook(model.getTitle(), model.getAuthor(), model.getYear());
     }
 }

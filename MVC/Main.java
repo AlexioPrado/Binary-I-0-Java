@@ -9,13 +9,13 @@ public class Main {
         //             title  = "Clean Code"
         //             author = "Robert C. Martin"
         //             year   = 2008
-        Book book1 = Book("Clean Code", "Robert C. Martin", 2008);
+        Book book1 = new Book("Clean Code", "Robert C. Martin", 2008);
 
         // TODO (2): Create a BookView
-        BookView bookView1 = BookView();
+        BookView bookView1 = new BookView();
 
         // TODO (3): Create a BookController, passing in your Book and BookView
-        BookController bookCtrl = BookController(book1, bookView1);
+        BookController bookCtrl = new BookController(book1, bookView1);
 
         // TODO (4): Call showBook() to display the book's initial details
         bookCtrl.showBook();
@@ -23,6 +23,7 @@ public class Main {
         // TODO (5): Call updateYear(2020), then call showBook() again
         //           Expected: "Year updated." followed by the updated details
         bookCtrl.updateYear(2020);
+        bookCtrl.showBook();
 
         // TODO (6): Call updateYear(3000)
         //           Expected: "Invalid year."

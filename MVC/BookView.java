@@ -16,7 +16,7 @@ public class BookView {
     public static void displayBook(String title, String author, int year){
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
-        System.out.println("Year: " + year);
+        System.out.println("Year: " + year + "\n");
     }
 
     // TODO (2): Write a method called displayMessage that accepts:
